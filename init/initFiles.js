@@ -16,9 +16,9 @@ const { createIndexHtml } = require('../compiler');
 
 function initFiles(options){
   copyFiles('css');
-  copyFiles('js');
-  createIndexHtml(options);
+  copyFiles('js');  
   copyWelcomePage();
+  createIndexHtml(options);
 }
 
 function copyFiles(field){
