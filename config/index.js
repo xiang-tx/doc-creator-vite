@@ -48,7 +48,8 @@ const regexp = {
   //匹配iframe page中的内容
   reg_iframeContent: /<div class="iframe-page">([\d\D]*?)<\/div>/,
   //匹配md.html内部的{{newStr}}
-  reg_mdStr: /{{(.+?)}}/
+  reg_mdStr: /{{(.+?)}}/,
+  
 }
 
 module.exports = {

@@ -4,6 +4,13 @@ const {
   initWatchers
 } = require('./init');
 
+const {
+  outerPath:{
+    mdPath
+  }
+} = require('./config');
+
+const { mdToHtml } = require('./compiler');
 
 class ViteDocCreator {
   constructor(options){
@@ -23,6 +30,7 @@ class ViteDocCreator {
     initFolders(this.options);
     initFiles(this.options);
     // initWatchers(this.options);
+    mdToHtml('/README.md');
   }
 }
 
