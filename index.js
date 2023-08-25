@@ -22,7 +22,7 @@ class ViteDocCreator {
   initialize(){
     initFolders(this.options);
     initFiles(this.options);
-    initWatchers(this.options);
+    // initWatchers(this.options);
   }
 }
 

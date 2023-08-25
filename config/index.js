@@ -17,13 +17,13 @@ const title = 'This is my firet Document by Vite-Doc-Creator';
  * index.html
  */ 
 const outerPath = {
-  rootPath:resolve(__dirname,'../../../'),
-  srcPath:resolve(__dirname,'../../../src/'),
-  cssPath:resolve(__dirname,'../../../src/css/'),
-  jsPath:resolve(__dirname,'../../../src/js/'),
-  htmlPath:resolve(__dirname,'../../../src/html'),
-  mdPath:resolve(__dirname,'../../../workspace')
-};
+  rootPath: resolve(__dirname, '../../..'),
+  srcPath: resolve(__dirname, '../../../src/'),
+  htmlPath: resolve(__dirname, '../../../src/html/'),
+  jsPath: resolve(__dirname, '../../../src/js'),
+  cssPath: resolve(__dirname, '../../../src/css/'),
+  mdPath: resolve(__dirname, '../../../workspace')
+}
 
 /**插件目录体系
  * temp_files ->
@@ -38,11 +38,24 @@ const innerDir = {
   jsDir: resolve(__dirname, '../temp_files/js/')
 }
 
+const regexp = {
+  //匹配ul menu-list内部的内容
+  reg_ulContent: /<ul class=\"menu-list\">([\d\D]*?)<\/ul>/,
+  //匹配tilte中的内容
+  reg_titleContent: /<title>([\d\D]*?)<\/title>/,
+  //匹配header-title中的内容
+  reg_headerTitleContent: /<h1 class="header-title">([\d\D]*?)<\/h1>/,
+  //匹配iframe page中的内容
+  reg_iframeContent: /<div class="iframe-page">([\d\D]*?)<\/div>/,
+  //匹配md.html内部的{{newStr}}
+  reg_mdStr: /{{(.+?)}}/
+}
+
 module.exports = {
   port,
   domain,
   title,
   outerPath,
   innerDir,
-  // regexp
+  regexp
 }
