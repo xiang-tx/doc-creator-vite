@@ -11,18 +11,20 @@ function readFile(path){
   return readFileSync(path,'utf8')
 }
 
-function createMenuItem(filename, userDomain, userPort, isActive){
+//创建菜单项（模板）
+function createMenuItem (filename, userDomain, userPort, isActive) {
   return `
-    <li class="menu-item${isActive ? ' active' : ''}">
-      <a href="${_formatBaseUrl(userDomain,userPort)}/src/html/${filename}" target="myFrame">${filename.replace('.html','')}</a>
+    <li class="menu-item${ isActive ? ' active' : '' }">
+      <a href="${_formatBaseUrl(userDomain, userPort)}/src/html/${filename}" target="myIframe">${filename.replace('.html', '')}</a>
     </li>
-  `
+  `;
 }
 
-function createIframe(filename,userDomain,userPort){
+//创建iframe
+function createIframe (filename, userDomain, userPort) {
   return `
-    <iframe src="${_formatBaseUrl(userDomain,userPort)}/src/html/${filename}"
-  `;
+    <iframe src="${_formatBaseUrl(userDomain, userPort)}/src/html/${filename}" name="myIframe"> </iframe>
+  `
 }
 
 function _formatBaseUrl(userDomain, userPort){

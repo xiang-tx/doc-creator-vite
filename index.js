@@ -10,7 +10,7 @@ const {
   }
 } = require('./config');
 
-const { mdToHtml } = require('./compiler');
+// const { mdToHtml } = require('./compiler');
 
 class ViteDocCreator {
   constructor(options){
@@ -29,8 +29,8 @@ class ViteDocCreator {
   initialize(){
     initFolders(this.options);
     initFiles(this.options);
-    // initWatchers(this.options);
-    mdToHtml('/README.md');
+    initWatchers(this.options);
+    // mdToHtml('/README.md');
   }
 }
 
