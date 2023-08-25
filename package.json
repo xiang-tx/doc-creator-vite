@@ -1,0 +1,24 @@
+{
+  "name": "doc-creator-vite",
+  "version": "0.0.1",
+  "description": "A fast and light Document Creator\r 一个轻快的文档生成器",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiang-tx/doc-creator-vite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiang-tx/doc-creator-vite/issues"
+  },
+  "homepage": "https://github.com/xiang-tx/doc-creator-vite#readme",
+  "devDependencies": {
+    "highlight.js": "^10.2.1",
+    "marked": "^2.0.0"
+  }
+}
